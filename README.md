@@ -1,10 +1,10 @@
 # Final-Project-Transforming-and-Analyzing-Data-with-SQL
 
 ## Project/Goals
-Extracting data from a SQL database
-Cleaning, transforming and analyzing data
-Loading data into a database
-Developing and implementing a QA process to validate transformed data against raw data
+Extracting data from a SQL database.
+Cleaning, transforming and analyzing data.
+Loading data into a database.
+Developing and implementing a QA process to validate transformed data against raw data.
 
 ## Process
 ### (your step 1)
