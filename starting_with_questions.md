@@ -511,8 +511,14 @@ No striking pattern identified
 
 SQL Queries:
 
-
-
+SELECT all_sessions.city, all_sessions.country, products.orderedquantity, all_sessions.productvariant
+FROM all_sessions
+FULL JOIN products
+ON all_sessions.productsku = products.productsku
+WHERE products.orderedquantity =  (SELECT MAX (products.orderedquantity)
+   FROM products)
+GROUP BY all_sessions.productvariant, all_sessions.city, all_sessions.country, products.orderedquantity
+ORDER BY all_sessions.country
 Answer:
 
 
