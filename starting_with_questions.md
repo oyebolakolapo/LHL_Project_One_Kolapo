@@ -493,12 +493,16 @@ NULL	NULL	30.6571835![image](https://github.com/oyebolakolapo/LHL_Project_One_Ko
 
 
 SQL Queries:
-
-
+SELECT all_sessions.fullvisitorid, all_sessions.type_s, all_sessions.city, all_sessions.country, products.orderedquantity
+FROM all_sessions
+FULL JOIN products
+ON all_sessions.productsku = products.productsku
+GROUP BY all_sessions.fullvisitorid, all_sessions.type_s, all_sessions.city, all_sessions.country, products.orderedquantity
+ORDER BY all_sessions.type_s
 
 Answer:
 
-
+No striking pattern identified
 
 
 
