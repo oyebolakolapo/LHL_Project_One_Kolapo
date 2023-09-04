@@ -5,12 +5,14 @@ Answer the following questions and provide the SQL queries used to find the answ
 
 
 SQL Queries:
-
-
-
+SELECT city, country, totaltransactionrevenue FROM all_sessions
+WHERE totaltransactionrevenue = (
+   SELECT MAX (totaltransactionrevenue)
+   FROM all_sessions
+);
 Answer:
-
-
+city	country	totaltransactionrevenue
+not available in demo dataset	United States	1015480000![image](https://github.com/oyebolakolapo/LHL_Project_One_Kolapo/assets/40770957/0731b433-91bc-4ad8-81d4-c9471a44d3d3)
 
 
 **Question 2: What is the average number of products ordered from visitors in each city and country?**
