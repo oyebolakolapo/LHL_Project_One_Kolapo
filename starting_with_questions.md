@@ -84,54 +84,55 @@ fullvisitorid	city	country	name	avgnumberofproducts
 
 
 SQL Queries:
-SELECT v2productcategory, fullvisitorid, city, country 
+SELECT v2productcategory, fullvisitorid, city, country, sales_report.total_ordered 
 FROM all_sessions
-GROUP BY v2productcategory, fullvisitorid, city, country 
-ORDER BY v2productcategory
+LEFT JOIN sales_report ON all_sessions.productssku = sales_report.productssku
+GROUP BY v2productcategory, sales_report.total_ordered, fullvisitorid, city, country
+ORDER BY v2productcategory, country
 
 Answer:
-v2productcategory	fullvisitorid	city	country
-(not set)	8.99E+17	not available in demo dataset	Canada
-(not set)	1.25E+18	Columbus	United States
-(not set)	2.4E+18	not available in demo dataset	United States
-(not set)	4.41E+18	Irvine	United States
-(not set)	5.1E+18	Salem	United States
-(not set)	7.37E+18	New York	United States
-Apparel	8.61E+16	Mountain View	United States
-Apparel	2.24E+17	Austin	United States
-Apparel	4.57E+17	not available in demo dataset	United States
-Apparel	7.27E+17	Bengaluru	India
-Apparel	7.43E+17	New York	United States
-Apparel	3.29E+18	Toronto	Canada
-Apparel	4.95E+18	Chicago	United States
-Apparel	5.96E+18	Mountain View	United States
-Apparel	7.68E+18	not available in demo dataset	United States
-Apparel	8.8E+18	San Jose	United States
-Apparel	8.91E+18	not available in demo dataset	Canada
-Bags	1.48E+18	not available in demo dataset	United States
-Bags	8.44E+18	Atlanta	United States
-Drinkware	6.34E+18	Detroit	United States
-Electronics	3.44E+18	not available in demo dataset	United States
-Electronics	7.3E+18	not available in demo dataset	United States
-Headgear	7.36E+18	not available in demo dataset	France
-Housewares	3.68E+17	Sunnyvale	United States
-Lifestyle	5.38E+17	Chicago	United States
-Lifestyle	6.84E+18	not available in demo dataset	United States
-Nest-USA	2.58E+16	San Francisco	United States
-Nest-USA	4.01E+17	San Francisco	United States
-Nest-USA	1.7E+18	Mountain View	United States
-Nest-USA	2.31E+18	Mountain View	United States
-Nest-USA	2.81E+18	not available in demo dataset	United States
-Nest-USA	3.76E+18	not available in demo dataset	United States
-Nest-USA	4.4E+18	Sunnyvale	United States
-Nest-USA	4.85E+18	Nashville	United States
-Nest-USA	5.04E+18	Palo Alto	United States
-Nest-USA	6.33E+18	Sydney	Australia
-Nest-USA	6.57E+18	Chicago	United States
-Office	4.13E+18	not available in demo dataset	United States
-Waze	3.22E+18	not available in demo dataset	United States
-Waze	8.65E+18	Mountain View	United States![image](https://github.com/oyebolakolapo/LHL_Project_One_Kolapo/assets/40770957/fc335c7c-f2cd-4c17-b8a5-4ae38cb1b4ef)
-
+Nest-USA was the most ordered item especially from visitors in US cities.
+v2productcategory	fullvisitorid	city	country	total_ordered
+(not set)	8.99E+17	not available in demo dataset	Canada	14
+(not set)	7.37E+18	New York	United States	4
+(not set)	2.4E+18	not available in demo dataset	United States	13
+(not set)	4.41E+18	Irvine	United States	13
+(not set)	1.25E+18	Columbus	United States	NULL
+(not set)	5.1E+18	Salem	United States	NULL
+Apparel	3.29E+18	Toronto	Canada	NULL
+Apparel	8.91E+18	not available in demo dataset	Canada	NULL
+Apparel	7.27E+17	Bengaluru	India	NULL
+Apparel	8.8E+18	San Jose	United States	4
+Apparel	4.57E+17	not available in demo dataset	United States	5
+Apparel	8.61E+16	Mountain View	United States	NULL
+Apparel	2.24E+17	Austin	United States	NULL
+Apparel	7.43E+17	New York	United States	NULL
+Apparel	4.95E+18	Chicago	United States	NULL
+Apparel	5.96E+18	Mountain View	United States	NULL
+Apparel	7.68E+18	not available in demo dataset	United States	NULL
+Bags	1.48E+18	not available in demo dataset	United States	NULL
+Bags	8.44E+18	Atlanta	United States	NULL
+Drinkware	6.34E+18	Detroit	United States	23
+Electronics	3.44E+18	not available in demo dataset	United States	NULL
+Electronics	7.3E+18	not available in demo dataset	United States	NULL
+Headgear	7.36E+18	not available in demo dataset	France	0
+Housewares	3.68E+17	Sunnyvale	United States	60
+Lifestyle	6.84E+18	not available in demo dataset	United States	14
+Lifestyle	5.38E+17	Chicago	United States	26
+Nest-USA	6.33E+18	Sydney	Australia	102
+Nest-USA	5.04E+18	Palo Alto	United States	7
+Nest-USA	1.7E+18	Mountain View	United States	94
+Nest-USA	2.31E+18	Mountain View	United States	94
+Nest-USA	2.81E+18	not available in demo dataset	United States	94
+Nest-USA	4.85E+18	Nashville	United States	94
+Nest-USA	6.57E+18	Chicago	United States	94
+Nest-USA	3.76E+18	not available in demo dataset	United States	102
+Nest-USA	4.4E+18	Sunnyvale	United States	102
+Nest-USA	2.58E+16	San Francisco	United States	112
+Nest-USA	4.01E+17	San Francisco	United States	112
+Office	4.13E+18	not available in demo dataset	United States	22
+Waze	8.65E+18	Mountain View	United States	4
+Waze	3.22E+18	not available in demo dataset	United States	5![image](https://github.com/oyebolakolapo/LHL_Project_One_Kolapo/assets/40770957/708c2850-1eaa-4828-9581-ba189529238e)
 
 **Question 4: What is the top-selling product from each city/country? Can we find any pattern worthy of noting in the products sold?**
 
