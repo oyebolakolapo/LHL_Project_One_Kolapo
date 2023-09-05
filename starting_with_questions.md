@@ -139,17 +139,46 @@ Waze	3.22E+18	not available in demo dataset	United States	5![image](https://gith
 
 SQL Queries:
 
-SELECT all_sessions.city, all_sessions.country, products.orderedquantity, all_sessions.productvariant
+SSELECT products.name, city, country, products.orderedquantity 
 FROM all_sessions
-FULL JOIN products
-ON all_sessions.productsku = products.productsku
-WHERE products.orderedquantity =  (SELECT MAX (products.orderedquantity)
-   FROM products)
-GROUP BY all_sessions.productvariant, all_sessions.city, all_sessions.country, products.orderedquantity
-ORDER BY all_sessions.country
+INNER JOIN products ON all_sessions.productssku = products.productssku
+GROUP BY products.name, city, country, products.orderedquantity 
+ORDER BY country, products.orderedquantity DESC
 Answer:
 
-
+name	city	country	orderedquantity
+ Cam Indoor Security Camera - USA	Sydney	Australia	2139
+ Sunglasses	not available in demo dataset	Canada	887
+ Men's Vintage Badge Tee White	not available in demo dataset	Canada	121
+Android Wool Heather Cap Heather/Black	not available in demo dataset	France	168
+ 22 oz Water Bottle	Detroit	United States	10075
+SPF-15 Slim & Slender Lip Balm	Sunnyvale	United States	3682
+ Cam Outdoor Security Camera - USA	San Francisco	United States	2719
+ Cam Indoor Security Camera - USA	Sunnyvale	United States	2139
+ Cam Indoor Security Camera - USA	not available in demo dataset	United States	2139
+Four Color Retractable Pen	not available in demo dataset	United States	2002
+ Learning Thermostat 3rd Gen-USA - Stainless Steel	Chicago	United States	1886
+ Learning Thermostat 3rd Gen-USA - Stainless Steel	Mountain View	United States	1886
+ Learning Thermostat 3rd Gen-USA - Stainless Steel	Nashville	United States	1886
+ Learning Thermostat 3rd Gen-USA - Stainless Steel	not available in demo dataset	United States	1886
+ Sunglasses	not available in demo dataset	United States	1573
+ Sunglasses	Chicago	United States	1046
+ Laptop and Cell Phone Stickers	Irvine	United States	1033
+ Laptop and Cell Phone Stickers	not available in demo dataset	United States	1033
+ Learning Thermostat 3rd Gen-USA - White	Palo Alto	United States	849
+Red Spiral  Notebook	Salem	United States	316
+ Men's Vintage Badge Tee Sage	Mountain View	United States	193
+ Men's  Zip Hoodie	New York	United States	90
+ Men's  Zip Hoodie	San Jose	United States	90
+ Men's 100% Cotton Short Sleeve Hero Tee Black	Austin	United States	90
+ Bongo Cupholder Bluetooth Speaker	not available in demo dataset	United States	85
+ Mobile Phone Vent Mount	Mountain View	United States	68
+ Mood Original Window Decal	not available in demo dataset	United States	63
+ Men's Bike Short Sleeve Tee Charcoal	Mountain View	United States	41
+ Womens 3/4 Sleeve Baseball Raglan Heather/Black	Chicago	United States	23
+ Men's Short Sleeve Hero Tee Charcoal	not available in demo dataset	United States	17
+ Men's Short Sleeve Badge Tee Charcoal	Columbus	United States	5
+ Men's Airflow 1/4 Zip Pullover Lapis	not available in demo dataset	United States	3![image](https://github.com/oyebolakolapo/LHL_Project_One_Kolapo/assets/40770957/31607560-7137-4411-91ce-78d11a7198a2)
 
 
 
