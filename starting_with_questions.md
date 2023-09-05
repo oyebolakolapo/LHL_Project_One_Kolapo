@@ -84,16 +84,14 @@ fullvisitorid	city	country	avgnumberofproducts
 
 
 SQL Queries:
-SELECT all_sessions.fullvisitorid, all_sessions.type_s, all_sessions.city, all_sessions.country, products.orderedquantity
+SELECT v2productcategory, fullvisitorid, city, country 
 FROM all_sessions
-FULL JOIN products
-ON all_sessions.productsku = products.productsku
-GROUP BY all_sessions.fullvisitorid, all_sessions.type_s, all_sessions.city, all_sessions.country, products.orderedquantity
-ORDER BY all_sessions.type_s
+GROUP BY v2productcategory, fullvisitorid, city, country 
+ORDER BY v2productcategory
 
 Answer:
 
-No striking pattern identified
+Six visitors with product category "not set" were from the US and Canada with two of them also not indicating their city(ies).
 
 
 
