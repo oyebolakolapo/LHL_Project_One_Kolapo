@@ -36,49 +36,49 @@ RENAME COLUMN sku TO productsku;
 
 --Then we will INNER JOIN all_sessions table with products table
 
-SELECT all_sessions.fullvisitorid, all_sessions.city, all_sessions.country, avg (products.orderedquantity) AS avgnumberofproducts
+SELECT all_sessions.fullvisitorid, all_sessions.city, all_sessions.country, products.name, avg (products.orderedquantity) AS avgnumberofproducts
 FROM all_sessions
 INNER JOIN products
 ON all_sessions.productsku = products.productsku
-GROUP BY fullvisitorid, city, country
+GROUP BY fullvisitorid, city, country, products.name
 ORDER By country
 
 Answer:
-fullvisitorid	city	country	avgnumberofproducts
-6.33E+18	Sydney	Australia	2139
-8.99E+17	not available in demo dataset	Canada	887
-8.91E+18	not available in demo dataset	Canada	121
-7.36E+18	not available in demo dataset	France	168
-2.58E+16	San Francisco	United States	2719
-8.61E+16	Mountain View	United States	193
-2.24E+17	Austin	United States	90
-3.68E+17	Sunnyvale	United States	3682
-4.01E+17	San Francisco	United States	2719
-4.57E+17	not available in demo dataset	United States	17
-5.38E+17	Chicago	United States	1046
-1.25E+18	Columbus	United States	5
-1.7E+18	Mountain View	United States	1886
-2.31E+18	Mountain View	United States	1886
-2.4E+18	not available in demo dataset	United States	1033
-2.81E+18	not available in demo dataset	United States	1886
-3.22E+18	not available in demo dataset	United States	63
-3.44E+18	not available in demo dataset	United States	85
-3.76E+18	not available in demo dataset	United States	2139
-4.13E+18	not available in demo dataset	United States	2002
-4.4E+18	Sunnyvale	United States	2139
-4.41E+18	Irvine	United States	1033
-4.85E+18	Nashville	United States	1886
-4.95E+18	Chicago	United States	23
-5.04E+18	Palo Alto	United States	849
-5.1E+18	Salem	United States	316
-5.96E+18	Mountain View	United States	41
-6.34E+18	Detroit	United States	10075
-6.57E+18	Chicago	United States	1886
-6.84E+18	not available in demo dataset	United States	1573
-7.37E+18	New York	United States	90
-7.68E+18	not available in demo dataset	United States	3
-8.65E+18	Mountain View	United States	68
-8.8E+18	San Jose	United States	90![image](https://github.com/oyebolakolapo/LHL_Project_One_Kolapo/assets/40770957/127166d6-66be-40d5-b39e-5f7130d18251)
+fullvisitorid	city	country	name	avgnumberofproducts
+6.33E+18	Sydney	Australia	 Cam Indoor Security Camera - USA	2139
+8.99E+17	not available in demo dataset	Canada	 Sunglasses	887
+8.91E+18	not available in demo dataset	Canada	 Men's Vintage Badge Tee White	121
+7.36E+18	not available in demo dataset	France	Android Wool Heather Cap Heather/Black	168
+2.58E+16	San Francisco	United States	 Cam Outdoor Security Camera - USA	2719
+8.61E+16	Mountain View	United States	 Men's Vintage Badge Tee Sage	193
+2.24E+17	Austin	United States	 Men's 100% Cotton Short Sleeve Hero Tee Black	90
+3.68E+17	Sunnyvale	United States	SPF-15 Slim & Slender Lip Balm	3682
+4.01E+17	San Francisco	United States	 Cam Outdoor Security Camera - USA	2719
+4.57E+17	not available in demo dataset	United States	 Men's Short Sleeve Hero Tee Charcoal	17
+5.38E+17	Chicago	United States	 Sunglasses	1046
+1.25E+18	Columbus	United States	 Men's Short Sleeve Badge Tee Charcoal	5
+1.7E+18	Mountain View	United States	 Learning Thermostat 3rd Gen-USA - Stainless Steel	1886
+2.31E+18	Mountain View	United States	 Learning Thermostat 3rd Gen-USA - Stainless Steel	1886
+2.4E+18	not available in demo dataset	United States	 Laptop and Cell Phone Stickers	1033
+2.81E+18	not available in demo dataset	United States	 Learning Thermostat 3rd Gen-USA - Stainless Steel	1886
+3.22E+18	not available in demo dataset	United States	 Mood Original Window Decal	63
+3.44E+18	not available in demo dataset	United States	 Bongo Cupholder Bluetooth Speaker	85
+3.76E+18	not available in demo dataset	United States	 Cam Indoor Security Camera - USA	2139
+4.13E+18	not available in demo dataset	United States	Four Color Retractable Pen	2002
+4.4E+18	Sunnyvale	United States	 Cam Indoor Security Camera - USA	2139
+4.41E+18	Irvine	United States	 Laptop and Cell Phone Stickers	1033
+4.85E+18	Nashville	United States	 Learning Thermostat 3rd Gen-USA - Stainless Steel	1886
+4.95E+18	Chicago	United States	 Womens 3/4 Sleeve Baseball Raglan Heather/Black	23
+5.04E+18	Palo Alto	United States	 Learning Thermostat 3rd Gen-USA - White	849
+5.1E+18	Salem	United States	Red Spiral  Notebook	316
+5.96E+18	Mountain View	United States	 Men's Bike Short Sleeve Tee Charcoal	41
+6.34E+18	Detroit	United States	 22 oz Water Bottle	10075
+6.57E+18	Chicago	United States	 Learning Thermostat 3rd Gen-USA - Stainless Steel	1886
+6.84E+18	not available in demo dataset	United States	 Sunglasses	1573
+7.37E+18	New York	United States	 Men's  Zip Hoodie	90
+7.68E+18	not available in demo dataset	United States	 Men's Airflow 1/4 Zip Pullover Lapis	3
+8.65E+18	Mountain View	United States	 Mobile Phone Vent Mount	68
+8.8E+18	San Jose	United States	 Men's  Zip Hoodie	90![image](https://github.com/oyebolakolapo/LHL_Project_One_Kolapo/assets/40770957/0ec3074c-8580-4fbb-a4c4-797cdd90a0ee)
 
 **Question 3: Is there any pattern in the types (product categories) of products ordered from visitors in each city and country?**
 
