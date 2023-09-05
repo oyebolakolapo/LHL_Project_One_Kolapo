@@ -5,15 +5,23 @@ Answer the following questions and provide the SQL queries used to find the answ
 
 
 SQL Queries:
-SELECT city, country, totaltransactionrevenue FROM all_sessions
-WHERE totaltransactionrevenue = (
-   SELECT MAX (totaltransactionrevenue)
-   FROM all_sessions
-);
+SELECT city, country, totaltransactionrevenue 
+FROM all_sessions
+WHERE totaltransactionrevenue IS NOT NULL
+ORDER BY totaltransactionrevenue DESC
+LIMIT 10);
 Answer:
 city	country	totaltransactionrevenue
-not available in demo dataset	United States	1015480000![image](https://github.com/oyebolakolapo/LHL_Project_One_Kolapo/assets/40770957/0731b433-91bc-4ad8-81d4-c9471a44d3d3)
-
+not available in demo dataset	United States	1015480000
+not available in demo dataset	United States	1005500000
+Atlanta	United States	742480000
+Sunnyvale	United States	649240000
+not available in demo dataset	United States	391000000
+Sydney	Australia	358000000
+Chicago	United States	306000000
+San Francisco	United States	202000000
+Sunnyvale	United States	200000000
+not available in demo dataset	United States	169970000![image](https://github.com/oyebolakolapo/LHL_Project_One_Kolapo/assets/40770957/7e9c364f-6ff4-41d3-a015-858e6a604102)
 
 **Question 2: What is the average number of products ordered from visitors in each city and country?**
 
