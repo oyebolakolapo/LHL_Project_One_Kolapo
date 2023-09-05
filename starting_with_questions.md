@@ -90,9 +90,48 @@ GROUP BY v2productcategory, fullvisitorid, city, country
 ORDER BY v2productcategory
 
 Answer:
-
 Six visitors with product category "not set" were from the US and Canada with two of them also not indicating their city(ies).
-
+v2productcategory	fullvisitorid	city	country
+(not set)	8.99E+17	not available in demo dataset	Canada
+(not set)	1.25E+18	Columbus	United States
+(not set)	2.4E+18	not available in demo dataset	United States
+(not set)	4.41E+18	Irvine	United States
+(not set)	5.1E+18	Salem	United States
+(not set)	7.37E+18	New York	United States
+Apparel	8.61E+16	Mountain View	United States
+Apparel	2.24E+17	Austin	United States
+Apparel	4.57E+17	not available in demo dataset	United States
+Apparel	7.27E+17	Bengaluru	India
+Apparel	7.43E+17	New York	United States
+Apparel	3.29E+18	Toronto	Canada
+Apparel	4.95E+18	Chicago	United States
+Apparel	5.96E+18	Mountain View	United States
+Apparel	7.68E+18	not available in demo dataset	United States
+Apparel	8.8E+18	San Jose	United States
+Apparel	8.91E+18	not available in demo dataset	Canada
+Bags	1.48E+18	not available in demo dataset	United States
+Bags	8.44E+18	Atlanta	United States
+Drinkware	6.34E+18	Detroit	United States
+Electronics	3.44E+18	not available in demo dataset	United States
+Electronics	7.3E+18	not available in demo dataset	United States
+Headgear	7.36E+18	not available in demo dataset	France
+Housewares	3.68E+17	Sunnyvale	United States
+Lifestyle	5.38E+17	Chicago	United States
+Lifestyle	6.84E+18	not available in demo dataset	United States
+Nest-USA	2.58E+16	San Francisco	United States
+Nest-USA	4.01E+17	San Francisco	United States
+Nest-USA	1.7E+18	Mountain View	United States
+Nest-USA	2.31E+18	Mountain View	United States
+Nest-USA	2.81E+18	not available in demo dataset	United States
+Nest-USA	3.76E+18	not available in demo dataset	United States
+Nest-USA	4.4E+18	Sunnyvale	United States
+Nest-USA	4.85E+18	Nashville	United States
+Nest-USA	5.04E+18	Palo Alto	United States
+Nest-USA	6.33E+18	Sydney	Australia
+Nest-USA	6.57E+18	Chicago	United States
+Office	4.13E+18	not available in demo dataset	United States
+Waze	3.22E+18	not available in demo dataset	United States
+Waze	8.65E+18	Mountain View	United States
 
 
 **Question 4: What is the top-selling product from each city/country? Can we find any pattern worthy of noting in the products sold?**
