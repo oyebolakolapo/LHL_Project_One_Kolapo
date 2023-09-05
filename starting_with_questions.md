@@ -90,7 +90,6 @@ GROUP BY v2productcategory, fullvisitorid, city, country
 ORDER BY v2productcategory
 
 Answer:
-Six visitors with product category "not set" were from the US and Canada with two of them also not indicating their city(ies).
 v2productcategory	fullvisitorid	city	country
 (not set)	8.99E+17	not available in demo dataset	Canada
 (not set)	1.25E+18	Columbus	United States
@@ -131,7 +130,7 @@ Nest-USA	6.33E+18	Sydney	Australia
 Nest-USA	6.57E+18	Chicago	United States
 Office	4.13E+18	not available in demo dataset	United States
 Waze	3.22E+18	not available in demo dataset	United States
-Waze	8.65E+18	Mountain View	United States
+Waze	8.65E+18	Mountain View	United States![image](https://github.com/oyebolakolapo/LHL_Project_One_Kolapo/assets/40770957/fc335c7c-f2cd-4c17-b8a5-4ae38cb1b4ef)
 
 
 **Question 4: What is the top-selling product from each city/country? Can we find any pattern worthy of noting in the products sold?**
