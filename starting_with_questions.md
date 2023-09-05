@@ -185,11 +185,38 @@ Red Spiral  Notebook	Salem	United States	316
 **Question 5: Can we summarize the impact of revenue generated from each city/country?**
 
 SQL Queries:
-
+SELECT city, country, totaltransactionrevenue, products.stocklevel
+FROM all_sessions
+INNER JOIN products ON all_sessions.productssku = products.productssku
+WHERE totaltransactionrevenue IS NOT NULL
+GROUP BY city, country, totaltransactionrevenue, products.stocklevel
+ORDER BY products.stocklevel DESC
 
 
 Answer:
-
+No specific patterns were observed between totaltransactionrevue and stocklevel
+city	country	totaltransactionrevenue	stocklevel
+San Francisco	United States	202000000	4683
+Sunnyvale	United States	649240000	4069
+Sunnyvale	United States	200000000	2615
+Sydney	Australia	358000000	2615
+not available in demo dataset	United States	124000000	2615
+Chicago	United States	306000000	2525
+Mountain View	United States	154000000	2525
+Nashville	United States	157000000	2525
+not available in demo dataset	United States	391000000	2525
+not available in demo dataset	United States	60000000	2086
+Chicago	United States	123940000	1195
+Palo Alto	United States	151000000	1142
+Mountain View	United States	26820000	277
+San Jose	United States	108380000	156
+Austin	United States	35780000	148
+Mountain View	United States	8980000	129
+not available in demo dataset	United States	1005500000	115
+Mountain View	United States	16990000	70
+not available in demo dataset	United States	9960000	66
+not available in demo dataset	United States	29970000	33
+Columbus	United States	21990000	9![image](https://github.com/oyebolakolapo/LHL_Project_One_Kolapo/assets/40770957/d139bcc9-9e5c-49df-8276-f060759ca46d)
 
 
 
