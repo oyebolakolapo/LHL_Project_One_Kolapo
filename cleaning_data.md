@@ -7,6 +7,11 @@ What issues will you address by cleaning the data?
 Queries:
 Below, provide the SQL queries you used to clean your data.
 --DATA CLEANING
+After dividing unit_price by 1000000 and creating a new column known as unit_price_actual using:
+ALTER TABLE analytics_renamed 
+ADD unit_price_actual numeric;
+UPDATE analytics_renamed SET unit_price_actual = unit_price / 1000000		
+
 --1. View rows and columns of first table all_sessions to identify inconsistencies
 SELECT *
 FROM all_sessions
