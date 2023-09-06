@@ -14,7 +14,7 @@ Developing and implementing a QA process to validate transformed data against ra
 (fill in what you discovered this data could tell you and how you used the data to answer those questions)
 
 ## Challenges 
-1. Initial challenges importing .csv tables in PgAdmin. I navigated this by chaning the dir of the table files to the pgAdmin folder on my computer.
+1. Initial challenges importing .csv tables in PgAdmin. I navigated this by changing the dir of the table files to the pgAdmin folder on my computer.
 
 ## Future Goals
 (what would you do if you had more time?)
