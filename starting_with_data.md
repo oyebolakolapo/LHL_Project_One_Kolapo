@@ -1107,18 +1107,19 @@ GGOEGHPL003214	 Stretch Fit Hat M/L Navy	2![image](https://github.com/oyebolakol
 Question 2: 
 find the total number of unique visitors (fullVisitorID) 
 SQL Queries:
-
+SELECT COUNT (DISTINCT fullvisitorid) AS Unique_visitors
+FROM all_sessions
 Answer:
-
-
+[40]
 
 Question 3: 
-
+--Find the total number of unique visitors by referring sites 
 SQL Queries:
-
+SELECT COUNT (DISTINCT fullvisitorid) AS Unique_visitors_by_referring_sites
+FROM all_sessions
+WHERE channelgrouping ='Referral'
 Answer:
-
-
+[17]
 
 Question 4: 
 
