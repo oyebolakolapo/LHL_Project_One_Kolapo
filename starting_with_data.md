@@ -1105,7 +1105,7 @@ GGOEGHPL003214	 Stretch Fit Hat M/L Navy	2![image](https://github.com/oyebolakol
 
 
 Question 2: 
-
+find the total number of unique visitors (fullVisitorID) 
 SQL Queries:
 
 Answer:
