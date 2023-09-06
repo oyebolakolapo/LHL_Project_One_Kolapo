@@ -7,8 +7,8 @@ Loading data into a database.
 Developing and implementing a QA process to validate transformed data against raw data.
 
 ## Process
-### (your step 1)
-### (your step 2)
+### Database creation, table 
+### Data cleaning
 
 ## Results
 (fill in what you discovered this data could tell you and how you use the data to answer those questions)
