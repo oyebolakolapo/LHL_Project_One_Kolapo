@@ -1122,11 +1122,47 @@ Answer:
 [17]
 
 Question 4: 
-
-SQL Queries:
+-- Find each unique product viewed by each visitorSQL Queries:
+SELECT DISTINCT all_sessions.fullvisitorid, products.name
+FROM all_sessions
+INNER JOIN products ON all_sessions.productssku = products.productssku
 
 Answer:
-
+fullvisitorid	name
+2.58E+16	 Cam Outdoor Security Camera - USA
+8.61E+16	 Men's Vintage Badge Tee Sage
+2.24E+17	 Men's 100% Cotton Short Sleeve Hero Tee Black
+3.68E+17	SPF-15 Slim & Slender Lip Balm
+4.01E+17	 Cam Outdoor Security Camera - USA
+4.57E+17	 Men's Short Sleeve Hero Tee Charcoal
+5.38E+17	 Sunglasses
+8.99E+17	 Sunglasses
+1.25E+18	 Men's Short Sleeve Badge Tee Charcoal
+1.7E+18	 Learning Thermostat 3rd Gen-USA - Stainless Steel
+2.31E+18	 Learning Thermostat 3rd Gen-USA - Stainless Steel
+2.4E+18	 Laptop and Cell Phone Stickers
+2.81E+18	 Learning Thermostat 3rd Gen-USA - Stainless Steel
+3.22E+18	 Mood Original Window Decal
+3.44E+18	 Bongo Cupholder Bluetooth Speaker
+3.76E+18	 Cam Indoor Security Camera - USA
+4.13E+18	Four Color Retractable Pen
+4.4E+18	 Cam Indoor Security Camera - USA
+4.41E+18	 Laptop and Cell Phone Stickers
+4.85E+18	 Learning Thermostat 3rd Gen-USA - Stainless Steel
+4.95E+18	 Womens 3/4 Sleeve Baseball Raglan Heather/Black
+5.04E+18	 Learning Thermostat 3rd Gen-USA - White
+5.1E+18	Red Spiral  Notebook
+5.96E+18	 Men's Bike Short Sleeve Tee Charcoal
+6.33E+18	 Cam Indoor Security Camera - USA
+6.34E+18	 22 oz Water Bottle
+6.57E+18	 Learning Thermostat 3rd Gen-USA - Stainless Steel
+6.84E+18	 Sunglasses
+7.36E+18	Android Wool Heather Cap Heather/Black
+7.37E+18	 Men's  Zip Hoodie
+7.68E+18	 Men's Airflow 1/4 Zip Pullover Lapis
+8.65E+18	 Mobile Phone Vent Mount
+8.8E+18	 Men's  Zip Hoodie
+8.91E+18	 Men's Vintage Badge Tee White![image](https://github.com/oyebolakolapo/LHL_Project_One_Kolapo/assets/40770957/af7894a3-4fae-452d-a11f-16d751043445)
 
 
 Question 5: 
