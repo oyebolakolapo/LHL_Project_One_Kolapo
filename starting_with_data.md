@@ -1166,7 +1166,12 @@ fullvisitorid	name
 
 
 Question 5: 
-
+--Compute the percentage of visitors to the site that actually makes a purchase
 SQL Queries:
-
+SELECT
+   all_sessions.transactions, COUNT(fullvisitorid) * 100.0 / ((SELECT COUNT(fullvisitorid) FROM all_sessions) * 1.0)
+FROM all_sessions
+WHERE transactions IS NOT NULL
+GROUP BY all_sessions.transactions
 Answer:
+[65]
