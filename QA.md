@@ -1,6 +1,6 @@
 What are your risk areas? Identify and describe them.
 
-The risk areas for the data include:
+I focused on resolving the following issues:
 
 
 ##Remove irrelevant data
