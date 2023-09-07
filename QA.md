@@ -2,12 +2,19 @@ What are your risk areas? Identify and describe them.
 
 The risk areas for the data include:
 ##Remove irrelevant data
+
 ##Remove duplicate data
+
 ##Fix structural errors
+
 ##Do type conversion
+
 ##Handle missing data
+
 ##Deal with outliers
+
 ##Standardize/Normalize data
+
 ##Validate data
 
 QA Process:
