@@ -17,6 +17,6 @@ Developing and implementing a QA process to validate transformed data against ra
 1. Initial challenges importing .csv tables in PgAdmin. I navigated this by changing the dir of the table files to the pgAdmin folder on my computer.
 
 ## Future Goals
-I would have spent more time cleaning the data if there was more time on the project.
+I would have spent more time cleaning the data if there was more time for the project.
 
 
