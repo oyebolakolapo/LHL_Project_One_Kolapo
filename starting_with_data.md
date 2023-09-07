@@ -1,14 +1,14 @@
-Question 1: 
---Part 4: Starting with Data
---Consider the data you have available to you. You can use the data to: find all duplicate records, find the total number of unique, visitors (fullVisitorID), find the total number of unique visitors by referring sites, find each unique product viewed by each visitor, compute the percentage of visitors to the site that actually makes a purchase
+#Question 1: 
+##Part 4: Starting with Data
+###Consider the data you have available to you. You can use the data to: find all duplicate records, find the total number of unique, visitors (fullVisitorID), find the total number of unique visitors by referring sites, find each unique product viewed by each visitor, compute the percentage of visitors to the site that actually makes a purchase
 
-SQL Queries:
+##SQL Queries:
 SELECT products.productssku, products.name, COUNT (*)
 FROM products
 GROUP BY products.productssku, products.name
 HAVING COUNT (products.productssku) > 1
 
-Answer: 
+##Answer: 
 productssku	name	count
 GGOEGADJ059715	 Men's Quilted Insulated Vest Battleship Grey	2
 9181149	Gift Card - $25.00	2
@@ -1104,30 +1104,30 @@ GGOEAAEB028314	Android Women's Short Sleeve Hero Tee Black	2
 GGOEGHPL003214	 Stretch Fit Hat M/L Navy	2![image](https://github.com/oyebolakolapo/LHL_Project_One_Kolapo/assets/40770957/b5e7283f-a9b2-40f0-b6ef-9c158bc051e6)
 
 
-Question 2: 
-find the total number of unique visitors (fullVisitorID) 
-SQL Queries:
+#Question 2: 
+##Find the total number of unique visitors (fullVisitorID) 
+###SQL Queries:
 SELECT COUNT (DISTINCT fullvisitorid) AS Unique_visitors
 FROM all_sessions
 Answer:
 [40]
 
-Question 3: 
---Find the total number of unique visitors by referring sites 
-SQL Queries:
+#Question 3: 
+##Find the total number of unique visitors by referring sites 
+###SQL Queries:
 SELECT COUNT (DISTINCT fullvisitorid) AS Unique_visitors_by_referring_sites
 FROM all_sessions
 WHERE channelgrouping ='Referral'
 Answer:
 [17]
 
-Question 4: 
--- Find each unique product viewed by each visitorSQL Queries:
+#Question 4: 
+##Find each unique product viewed by each visitorSQL Queries:
 SELECT DISTINCT all_sessions.fullvisitorid, products.name
 FROM all_sessions
 INNER JOIN products ON all_sessions.productssku = products.productssku
 
-Answer:
+###Answer:
 fullvisitorid	name
 2.58E+16	 Cam Outdoor Security Camera - USA
 8.61E+16	 Men's Vintage Badge Tee Sage
@@ -1165,9 +1165,9 @@ fullvisitorid	name
 8.91E+18	 Men's Vintage Badge Tee White![image](https://github.com/oyebolakolapo/LHL_Project_One_Kolapo/assets/40770957/af7894a3-4fae-452d-a11f-16d751043445)
 
 
-Question 5: 
---Compute the percentage of visitors to the site that actually makes a purchase
-SQL Queries:
+#Question 5: 
+##Compute the percentage of visitors to the site that actually makes a purchase
+###SQL Queries:
 SELECT
    all_sessions.transactions, COUNT(fullvisitorid) * 100.0 / ((SELECT COUNT(fullvisitorid) FROM all_sessions) * 1.0)
 FROM all_sessions
