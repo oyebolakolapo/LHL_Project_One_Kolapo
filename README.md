@@ -18,5 +18,5 @@ Developing and implementing a QA process to validate transformed data against ra
 
 ## Future Goals
 I would have spent more time cleaning the data if there was more time on the project.
-<img width="325" alt="image" src="https://github.com/oyebolakolapo/LHL_Project_One_Kolapo/assets/40770957/61ecb4ce-f491-4b38-a1ee-4e40132ebd4b">
+
 
