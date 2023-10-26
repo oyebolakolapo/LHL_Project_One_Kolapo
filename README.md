@@ -1,4 +1,4 @@
-# Final-Project-Transforming-and-Analyzing-Data-with-SQL
+# Project-Transforming-and-Analyzing-Data-with-SQL
 
 ## Project/Goals
 Extracting data from a SQL database.
