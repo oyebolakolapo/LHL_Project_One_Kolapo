@@ -21,6 +21,6 @@ Question 5: Can we summarize the iHow the questions were answered
 1. Initial challenges importing .csv tables in PgAdmin. I navigated this by changing the dir of the table files to the pgAdmin folder on my computer.
 
 ## Future Goals
-I would have spent more time cleaning the data if there was more time for the project.
+I would have spent more time on data cleaning if there was more time for the project.
 
 
